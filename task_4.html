@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+.hero {
+    background: linear-gradient(to bottom, #4CAF50, #2196F3);
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.about, .projects, .contact {
+    padding: 50px 0;
+}
+
+.about h2, .projects h2, .contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.project {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project p {
+    color: #666;
+}
+
+.project a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF5722;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #E64A19;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Hi, I'm Ch. Deepak</h1>
+            <p>A passionate web developer ready to create amazing experiences.</p>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I'm Ch. Deepak, a web developer based in [Your Location]. I hold a Bachelor of Technology in Computer Science from KL University. My skills include C, Java, database management, networks, and I'm a Coursera certified expert in data analytics and visualization.</p>
+            <h3>Education</h3>
+            <p>Bachelor of Technology in Computer Science - KL University</p>
+            <h3>Professional Experience</h3>
+            <p>Web Developer at [Your Company] (Year - Present)</p>
+        </div>
+    </section>
+    
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project Title</h3>
+                <p>Description of the project.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div class="project">
+                <h3>Project Title</h3>
+                <p>Description of the project.</p>
+                <a href="#">View Project</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+       
+        
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            navLinks.forEach(link => {
+                link.addEventListener("click", smoothScroll);
+            });
+
+            function smoothScroll(event) {
+                event.preventDefault();
+                const targetId = event.target.getAttribute("href");
+                const targetSection = document.querySelector(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 50,
+                    behavior: "smooth"
+                });
+            }
+        });
+    </script>
+</body>
+</html>
